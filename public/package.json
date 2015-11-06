@@ -14,8 +14,7 @@
     "typescript": "^1.6.2"
   },
   "scripts": {
-    "tsc": "tsc -p src -w",
-    "start": "live-server --open=src --port=8001"
+    "tsc": "tsc -p src -w"
   },
   "author": "",
   "license": "ISC"
