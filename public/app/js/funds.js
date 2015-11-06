@@ -27,7 +27,8 @@ var FundsComponent = (function () {
             templateUrl: '../app/fundsTemplate.html',
             directives: [angular2_1.FORM_DIRECTIVES, angular2_1.CORE_DIRECTIVES],
             providers: [mutualFundService_1.MutualFundService],
-            inputs: ['funds']
+            inputs: ['funds'],
+            styleUrls: ['../app/appStyle.css']
         }), 
         __metadata('design:paramtypes', [mutualFundService_1.MutualFundService])
     ], FundsComponent);

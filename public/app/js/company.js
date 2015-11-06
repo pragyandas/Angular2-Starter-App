@@ -15,11 +15,16 @@ var CompanyComponent = (function () {
         this.mutualFundService = mutualFundService;
     }
     CompanyComponent.prototype.getFunds = function (company) {
-        this.mutualFundService.getFunds(company.parentName, company.name).subscribe(function (results) {
-            JSON.parse(results._body).forEach(function (fund) {
-                company.funds.push(fund);
+        if (company.funds.length === 0) {
+            this.mutualFundService.getFunds(company.parentName, company.name).subscribe(function (results) {
+                JSON.parse(results._body).forEach(function (fund) {
+                    company.funds.push(fund);
+                });
             });
-        });
+        }
+        else {
+            company.fundsVisible = !company.fundsVisible;
+        }
         event.stopPropagation();
     };
     __decorate([

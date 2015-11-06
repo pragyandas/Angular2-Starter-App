@@ -18,16 +18,21 @@ var CategoryComponent = (function () {
         this.categories = [];
         mutualFundService.getAllCategories().subscribe(function (results) {
             JSON.parse(results._body).forEach(function (category) {
-                _this.categories.push({ name: category, companies: [] });
+                _this.categories.push({ name: category, companies: [], companiesVisible: true });
             });
         });
     }
     CategoryComponent.prototype.getCompanies = function (category) {
-        this.mutualFundService.getCompanies(category.name).subscribe(function (results) {
-            JSON.parse(results._body).forEach(function (company) {
-                category.companies.push({ name: company, parentName: category.name, funds: [] });
+        if (category.companies.length === 0) {
+            this.mutualFundService.getCompanies(category.name).subscribe(function (results) {
+                JSON.parse(results._body).forEach(function (company) {
+                    category.companies.push({ name: company, parentName: category.name, funds: [], fundsVisible: true });
+                });
             });
-        });
+        }
+        else {
+            category.companiesVisible = !category.companiesVisible;
+        }
         event.stopPropagation();
     };
     CategoryComponent = __decorate([

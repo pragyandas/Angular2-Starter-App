@@ -9,7 +9,7 @@ import {Fund} from './model';
   directives: [FORM_DIRECTIVES, CORE_DIRECTIVES],
   providers: [MutualFundService],
   inputs:['funds'],
-  styleUrls: ['../app/appStyle.css']
+  styleUrls:['../app/appStyle.css']
 })
 export class FundsComponent {
   constructor(private mutualFundService: MutualFundService) {
