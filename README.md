@@ -6,8 +6,13 @@ Angular 2 Application - Express API
 
 ## Running the application
 
+###Install Dependencies
+npm install
+
+###Run Application
 node app.js
 
+###Browse
 Open http://localhost:3000 in the browser
 
 ## Future Upgrades
