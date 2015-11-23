@@ -17,14 +17,6 @@ node app.js
 ###Browse
 Open http://localhost:3000 in the browser
 
-## Future Upgrades
-
-Use of Reactive ExtensionS(RxJs) on both client and server.
-
-Serving Observables from the Express endpoints.
-
-Consuming Observables from the Angular 2.0 application.
-
 ## Alternative Repos
  Angular 2.0 Webpack Starter https://github.com/pragyandas/Angular2-Webpack-Starter-Application
 
